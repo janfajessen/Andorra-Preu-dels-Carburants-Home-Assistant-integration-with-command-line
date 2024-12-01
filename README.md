@@ -146,6 +146,11 @@ Si vols obtindre qualsevol altra benzinera que està a la web has d'escriure el 
 
 ```curl -Lsk https://si... ...&idParròquia\=7``` = Escaldes-Engordany
 
+
+
+
+Actualitza l'arxiu command_line o Reinicia Home Assistant.
+
 </details>
 
 
@@ -198,6 +203,9 @@ Si quieres obtener cualquier otra gasolinera que está en la web debes escribir 
 
 ```curl -Lsk https://si... ...&idParroquia\=7``` = Escaldes-Engordany
 
+
+
+Actualiza el archivo command_line o Reinicia Home Assistant.
 </details>
 
 <details>
@@ -249,6 +257,10 @@ Si vous souhaitez obtenir une autre station-service présente sur le site Web, v
 
 ```curl -Lsk https://si... ...&idParroquia\=7``` = Escaldes-Engordany
 
+
+
+
+Mettez à jour le fichier command_line ou redémarrez Home Assistant.
 </details>
 
 
@@ -292,6 +304,10 @@ If you want to get any other gas station that is on the web you must write the n
 ```curl -Lsk https://si... ...&idParroquia\=6``` = Sant Julià de Loria
 
 ```curl -Lsk https://si... ...&idParroquia\=7``` = Escaldes-Engordany
+
+
+
+Update the command_line file or Restart Home Assistant.
 
 </details>
 
