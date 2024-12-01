@@ -296,9 +296,16 @@ If you want to get any other gas station that is on the web you must write the n
 </details>
 
 
-<span>![</span><span>Aquí la descripción de la imagen por si no carga</span><span>]</span><span>(</span><span>https://raw.githubusercontent.com/parzibyte/WaterPy/master/assets/ImagenV1.png</span><span>)</span>
+<span>
+<img width="570" alt="home_assistant_grid_card" src="https://github.com/user-attachments/assets/4157ebe0-ca9c-498d-923d-100fbb2e2852">
+</span>
 
-Home Assistant Grid card:
+
+<details>
+<summary> Home Assistant Grid card: 
+  </summary>
+
+  
 ```
 square: false
 columns: 2
@@ -544,3 +551,5 @@ cards:
         unit: €/l
 title: Preus Carburants d'Andorra
 ```
+  
+</details>
