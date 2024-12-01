@@ -36,8 +36,8 @@ and copy the following into a command_line.yaml file:
 
 
 ```
-#command_line:
-#uncomment in confugration.yaml
+#command_line: 
+
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=6\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=5 | grep -i 'Andorracing Experience' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: AndorRacing Andorra la Vella gasoil
@@ -104,8 +104,8 @@ and copy the following into a command_line.yaml file:
       unique_id: elf_ordino_sp95
       scan_interval: 86400
       unit_of_measurement: €/l
-```
-
+``` 
+(*) uncomment# in configuration.yaml
 
 
 
