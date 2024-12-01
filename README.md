@@ -3,12 +3,12 @@
 
 ###### Andorra Preu dels Carburants, "integració" de Home Assistant amb command_line 
 ###### Andorra Precio de los Carburantes, "integración" de Home Assistant con command_line
-###### Prix ​​​​des carburants d'Andorre, "intégration" de Home Assistant avec command_line
+###### Prix des carburants d'Andorre, "intégration" de Home Assistant avec command_line
 
 
 <details>
 <summary> Català </summary>
-Perquè és difícil scrapejar la única web del Principat d'Andorra (https://sig.govern.ad/IPE/PreusCarburants) sobre el preu dels carburants ja que té diferents selectors he aconseguit amb un sensor de command line el preu dels carburants en benzineres de cada parròquia (gràcies a maniattico del canal de telegram Domoticaencasa.es).
+Perquè és difícil scrapejar la única web del Principat d'Andorra sobre el preu dels carburants (https://sig.govern.ad/IPE/PreusCarburants) ja que té diferents selectors he aconseguit amb un sensor de command line el preu dels carburants en benzineres de cada parròquia (gràcies a maniattico del canal de telegram Domoticaencasa.es).
 Crea un fitxer nou anomenat command_line.yaml, al fitxer configuration.yaml escriu commmand_line: !include command_line.yaml 
   i copia el següent en un arxiu command_line.yaml:
 </details>
@@ -22,75 +22,88 @@ Crea un archivo nuevo llamado command_line.yaml, en el archivo configuration.yam
 
 <details>
 <summary> Français </summary>
-Parce qu'il est difficile de gratter le seul site de la Principauté d'Andorre (https://sig.govern.ad/IPE/PreusCarburants) sur le prix du carburant car il a des sélecteurs différents, j'ai obtenu avec un capteur en ligne de commande le prix du carburant dans les stations-service de chaque paroisse (merci au maniattico de Domoticaencasa canal de télégramme est).
+Parce qu'il est difficile de gratter le seul site de la Principauté d'Andorre sur le prix du carburant (https://sig.govern.ad/IPE/PreusCarburants)  car il a des sélecteurs différents, j'ai obtenu avec un capteur en ligne de commande le prix du carburant dans les stations-service de chaque paroisse (merci au maniaque de Domoticaencasa.es canal de telegram).
 Créez un nouveau fichier appelé command_line.yaml, dans le fichier configuration.yaml, écrivez commmand_line : !include command_line.yaml 
-  et copiez ce qui suit sur une ligne de commande :
+  et copiez ce qui suit sur command_line.yaml :
 </details>
 
 <details>
 <summary> English </summary>
-Because it is difficult to scrape the only website in the Principality of Andorra (https://sig.govern.ad/IPE/PreusCarburants) on fuel prices as it has different selectors, I have managed to obtain the fuel prices at gas stations in each parish with a command line sensor (thanks to maniattico from the Domoticaencasa.es telegram channel).
+Because it is difficult to scrape the only website in the Principality of Andorra on fuel prices (https://sig.govern.ad/IPE/PreusCarburants) as it has different selectors, I have managed to obtain the fuel prices at gas stations in each parish with a command line sensor (thanks to maniattico from the Domoticaencasa.es telegram channel).
 Create a new file called command_line.yaml, in the configuration.yaml file write commmand_line: !include command_line.yaml 
 and copy the following into a command_line.yaml file:
 </details>
 
 
 ```
+#command_line:
+#uncomment in confugration.yaml
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=6\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=5 | grep -i 'Andorracing Experience' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: AndorRacing Andorra la Vella gasoil
       unique_id: andorracing_gasoil
       scan_interval: 86400
+      unit_of_measurement: €/l
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=5\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=5 | grep -i 'Andorracing Experience' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: AndorRacing Andorra la Vella sp98
       unique_id: andorracing_sp98
       scan_interval: 86400
+      unit_of_measurement: €/l
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=5 | grep -i 'Andorracing Experience' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: AndorRacing Andorra la Vella sp95
       unique_id: andorracing_sp95
       scan_interval: 86400
+      unit_of_measurement: €/l
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=5 | grep -i 'CEPSA Auto-Centre' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: Cepsa Unnic sp95
       unique_id: cepsa_unnic_sp96
       scan_interval: 86400
+      unit_of_measurement: €/l
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=7 | grep -i 'TotalEnergies - ARTAL 1 ' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: Escaldes Engordany TotalEnergies Artal1 sp95
       unique_id: totalenergies_escaldes_sp95
       scan_interval: 86400
+      unit_of_measurement: €/l
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=2 | grep -i 'Shell Encamp' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: Shell Encamp sp95
       unique_id: shell_encamp_sp95
       scan_interval: 86400
+      unit_of_measurement: €/l
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=2 | grep -i 'BP Encamp Centre I ' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: BP Encamp Centre I sp95
       unique_id: bp_emcamp_centre_sp95
       scan_interval: 86400
+      unit_of_measurement: €/l
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=1 | grep -i 'BP Sant Marc' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: BP Sant Marc Canillo sp95
       unique_id: bp_santmarc_canillo_sp95
       scan_interval: 86400
+      unit_of_measurement: €/l
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=6 | grep -i 'TotalEnergies - SANT ELOI' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: TotalEnergies Sant Eloi Sant Julià de Lòria sp95
       unique_id: totalenergies_santeloi_sp95
       scan_interval: 86400
+      unit_of_measurement: €/l
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=5 | grep -i 'Repsol Pont de Madrid' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: Repsol Pont de Madrid sp95
       unique_id: repsol_pontmadrid_sp95
       scan_interval: 86400
+      unit_of_measurement: €/l
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=3 | grep -i 'Elf Ordino' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: Elf Ordino sp95
       unique_id: elf_ordino_sp95
       scan_interval: 86400
+      unit_of_measurement: €/l
 ```
 
 
@@ -118,7 +131,7 @@ si vols canviar a <strong>Diesel</strong> canvia el 4 per un 6:
 
 ```curl -Lsk https://si... ...?idProducte\=6```
 
-si vols canviar a <strong>Diesel super</strong> canvia el 4 per un 8:
+si vols canviar a <strong>Diesel+</strong> canvia el 4 per un 8:
 
 ```curl -Lsk https://si... ...?idProducte\=8```
 
@@ -175,7 +188,7 @@ si quieres cambiar a <strong>Diesel</strong> cambia el 4 por un 6:
 
 ```curl -Lsk https://si... ...?idProducte\=6```
 
-si quieres cambiar a <strong>Diesel super</strong> cambia el 4 por un 8:
+si quieres cambiar a <strong>Diesel+</strong> cambia el 4 por un 8:
 
 ```curl -Lsk https://si... ...?idProducte\=8```
 
@@ -229,7 +242,7 @@ Si vous souhaitez passer au <strong>Diesel</strong>, remplacez le 4 par un 6 :
 
 ```curl -Lsk https://si... ...?idProducte\=6```
 
-Si vous souhaitez passer au <strong>Super Diesel</strong>, remplacez le 4 par un 8 :
+Si vous souhaitez passer au <strong>Diesel+</strong>, remplacez le 4 par un 8 :
 
 ```curl -Lsk https://si... ...?idProducte\=8```
 
@@ -281,7 +294,7 @@ if you want to change to <strong>Diesel</strong> change the 4 for a 6:
 
 ```curl -Lsk https://si... ...?idProducte\=6```
 
-if you want to change to <strong>Super Diesel</strong> change the 4 for an 8:
+if you want to change to <strong>Diesel+</strong> change the 4 for an 8:
 
 ```curl -Lsk https://si... ...?idProducte\=8```
 
