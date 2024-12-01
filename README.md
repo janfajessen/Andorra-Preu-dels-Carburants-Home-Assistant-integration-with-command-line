@@ -249,7 +249,7 @@ Si vous souhaitez obtenir une autre station-service présente sur le site Web, v
 
 ```curl -Lsk https://si... ...&idParroquia\=7``` = Escaldes-Engordany
 
-</détails>
+</details>
 
 
 <details>
@@ -294,6 +294,9 @@ If you want to get any other gas station that is on the web you must write the n
 ```curl -Lsk https://si... ...&idParroquia\=7``` = Escaldes-Engordany
 
 </details>
+
+
+<span>![</span><span>Aquí la descripción de la imagen por si no carga</span><span>]</span><span>(</span><span>https://raw.githubusercontent.com/parzibyte/WaterPy/master/assets/ImagenV1.png</span><span>)</span>
 
 Home Assistant Grid card:
 ```
