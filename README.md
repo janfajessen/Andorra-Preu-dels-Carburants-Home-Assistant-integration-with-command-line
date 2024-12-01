@@ -22,7 +22,7 @@ Crea un archivo nuevo llamado command_line.yaml, en el archivo configuration.yam
 
 <details>
 <summary> Français </summary>
-Parce qu'il est difficile de gratter le seul site de la Principauté d'Andorre (https://sig.govern.ad/IPE/PreusCarburants) sur le prix du carburant car il a des sélecteurs différents, j'ai obtenu avec un capteur en ligne de commande le prix du carburant dans les stations-service de chaque paroisse (merci au maniaque de Domoticaencasa canal de télégramme est).
+Parce qu'il est difficile de gratter le seul site de la Principauté d'Andorre (https://sig.govern.ad/IPE/PreusCarburants) sur le prix du carburant car il a des sélecteurs différents, j'ai obtenu avec un capteur en ligne de commande le prix du carburant dans les stations-service de chaque paroisse (merci au maniattico de Domoticaencasa canal de télégramme est).
 Créez un nouveau fichier appelé command_line.yaml, dans le fichier configuration.yaml, écrivez commmand_line : !include command_line.yaml 
   et copiez ce qui suit sur une ligne de commande :
 </details>
