@@ -200,7 +200,7 @@ Si quieres obtener cualquier otra gasolinera que está en la web debes escribir 
 
 </details>
 
-<détails>
+<details>
 <summary> Français </summary>
 
 
