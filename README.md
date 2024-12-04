@@ -43,67 +43,67 @@ and copy the following into a command_line.yaml file:
       name: AndorRacing Andorra la Vella gasoil
       unique_id: andorracing_gasoil
       scan_interval: 86400
-      unit_of_measurement: €/l
+      
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=5\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=5 | grep -i 'Andorracing Experience' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: AndorRacing Andorra la Vella sp98
       unique_id: andorracing_sp98
       scan_interval: 86400
-      unit_of_measurement: €/l
+      
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=5 | grep -i 'Andorracing Experience' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: AndorRacing Andorra la Vella sp95
       unique_id: andorracing_sp95
       scan_interval: 86400
-      unit_of_measurement: €/l
+      
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=5 | grep -i 'CEPSA Auto-Centre' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: Cepsa Unnic sp95
       unique_id: cepsa_unnic_sp96
       scan_interval: 86400
-      unit_of_measurement: €/l
+      
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=7 | grep -i 'TotalEnergies - ARTAL 1 ' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: Escaldes Engordany TotalEnergies Artal1 sp95
       unique_id: totalenergies_escaldes_sp95
       scan_interval: 86400
-      unit_of_measurement: €/l
+      
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=2 | grep -i 'Shell Encamp' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: Shell Encamp sp95
       unique_id: shell_encamp_sp95
       scan_interval: 86400
-      unit_of_measurement: €/l
+      
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=2 | grep -i 'BP Encamp Centre I ' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: BP Encamp Centre I sp95
       unique_id: bp_emcamp_centre_sp95
       scan_interval: 86400
-      unit_of_measurement: €/l
+      
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=1 | grep -i 'BP Sant Marc' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: BP Sant Marc Canillo sp95
       unique_id: bp_santmarc_canillo_sp95
       scan_interval: 86400
-      unit_of_measurement: €/l
+      
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=6 | grep -i 'TotalEnergies - SANT ELOI' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: TotalEnergies Sant Eloi Sant Julià de Lòria sp95
       unique_id: totalenergies_santeloi_sp95
       scan_interval: 86400
-      unit_of_measurement: €/l
+      
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=5 | grep -i 'Repsol Pont de Madrid' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: Repsol Pont de Madrid sp95
       unique_id: repsol_pontmadrid_sp95
       scan_interval: 86400
-      unit_of_measurement: €/l
+      
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=3 | grep -i 'Elf Ordino' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: Elf Ordino sp95
       unique_id: elf_ordino_sp95
       scan_interval: 86400
-      unit_of_measurement: €/l
+      
 ``` 
 (*) uncomment# in configuration.yaml
 
