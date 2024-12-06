@@ -9,6 +9,7 @@
 <details>
 <summary> Català </summary>
 Perquè és difícil scrapejar la única web del Principat d'Andorra sobre el preu dels carburants (https://sig.govern.ad/IPE/PreusCarburants) ja que té diferents selectors he aconseguit, amb un sensor de command line, el preu dels carburants en benzineres de cada parròquia (gràcies a maniattico del canal de telegram Domoticaencasa.es).
+  
 Crea un fitxer nou anomenat command_line.yaml, al fitxer configuration.yaml escriu commmand_line: !include command_line.yaml 
   i copia el següent en un arxiu command_line.yaml:
 </details>
@@ -16,6 +17,7 @@ Crea un fitxer nou anomenat command_line.yaml, al fitxer configuration.yaml escr
 <details>
 <summary> Español </summary>
   Porque es dificil scrapear la unica web del Principado de Andorra sobre el precio de los carburantes (https://sig.govern.ad/IPE/PreusCarburants) ya que tiene diferentes selectores he conseguido, con un sensor de command line, el precio de los carburantes en gasolineras de cada parroquia (gracias a maniattico del canal de telegram Domoticaencasa.es).
+  
 Crea un archivo nuevo llamado command_line.yaml, en el archivo configuration.yaml escribe commmand_line: !include command_line.yaml 
   y copia  lo siquiente en el archivo command_line.yaml:
 </details>
@@ -23,6 +25,7 @@ Crea un archivo nuevo llamado command_line.yaml, en el archivo configuration.yam
 <details>
 <summary> Français </summary>
 Parce qu'il est difficile de gratter le seul site de la Principauté d'Andorre sur le prix du carburant (https://sig.govern.ad/IPE/PreusCarburants)  car il a des sélecteurs différents, j'ai obtenu, avec un capteur en command line, le prix du carburant dans les stations-service de chaque paroisse (merci au maniattico de Domoticaencasa.es canal de telegram).
+  
 Créez un nouveau fichier appelé command_line.yaml, dans le fichier configuration.yaml, écrivez commmand_line : !include command_line.yaml 
   et copiez ce qui suit sur command_line.yaml :
 </details>
@@ -30,6 +33,7 @@ Créez un nouveau fichier appelé command_line.yaml, dans le fichier configurati
 <details>
 <summary> English </summary>
 Because it is difficult to scrape the only website in the Principality of Andorra on fuel prices (https://sig.govern.ad/IPE/PreusCarburants) as it has different selectors, I have managed to obtain the fuel prices at gas stations in each parish with a command line sensor (thanks to maniattico from the Domoticaencasa.es telegram channel).
+  
 Create a new file called command_line.yaml, in the configuration.yaml file write commmand_line: !include command_line.yaml 
 and copy the following into a command_line.yaml file:
 </details>
