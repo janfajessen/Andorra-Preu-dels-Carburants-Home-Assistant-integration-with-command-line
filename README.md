@@ -59,7 +59,7 @@ and copy the following into a command_line.yaml file:
   - sensor:
       command: curl -Lsk https://sig.govern.ad/IPE/PreusCarburants/GetPreus\?idProducte\=4\&data\=$(date '+%Y-%m-%d')%2023%3A59%3A59\&idParroquia\=5 | grep -i 'CEPSA Auto-Centre' -A10 | grep '€/l' | cut -d '>' -f2 | cut -d ' ' -f1
       name: Cepsa Unnic sp95
-      unique_id: cepsa_unnic_sp96
+      unique_id: cepsa_unnic_sp95
       scan_interval: 86400
       
   - sensor:
