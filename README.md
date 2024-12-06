@@ -143,7 +143,11 @@ o si vols canviar a <strong>Gasoil calefacció</strong> canvia el 4 per un 7:
 
 
 
-Si vols obtindre qualsevol altra benzinera que està a la web has d'escriure el nom exactament igual que està escrit aquí i segons on estigui canviar el número de parròquia:
+Si vols obtenir qualsevol altra benzinera que està a la web, encara que sembla que els preus són els mateixos segons la marca, has d'escriure el nom exactament igual que hi està escrit i canviar-lo a la part del codi:
+
+ ```| grep -i 'Andorracing Experience' -A10 |```
+ 
+ i segons a quina parròquia estigui canviar el número a la part del codi:
 
 ```curl -Lsk https://si... ...&idParròquia\=1``` = Canillo
 
@@ -200,7 +204,11 @@ o si quieres cambiar a <strong>Gasoil calefacción</strong> cambia el 4 por un 7
 
 
 
-Si quieres obtener cualquier otra gasolinera que está en la web debes escribir el nombre exactamente igual que está escrito ahi y según donde esté cambiar el número de parroquia:
+Si quieres obtener cualquier otra gasolinera que está en la web, aunque parece que los precios son los mismos según la marca, debes escribir el nombre exactamente igual que está escrito ahí y cambiarlo en la parte del código:
+
+```| grep -i 'Andorracing Experience' -A10 |```
+
+y según en qué parroquia esté cambiar el número en la parte del código:
 
 ```curl -Lsk https://si... ...&idParroquia\=1``` = Canillo
 
@@ -254,7 +262,11 @@ ou si vous souhaitez passer au <strong>Chauffage fioul</strong> remplacez le 4 p
 
 
 
-Si vous souhaitez obtenir une autre station-service présente sur le site Web, vous devez écrire le nom exactement de la même manière qu'il y est écrit et selon l'endroit où elle se trouve, changer le numéro de paroisse :
+Si vous souhaitez obtenir une autre station-service présente sur le Web, même s'il semble que les prix soient les mêmes selon la marque, vous devez écrire le nom exactement comme il y est écrit et le modifier dans la partie code :
+
+ ```| grep -i 'Andorracing Experience' -A10 |```
+
+ et selon la paroisse dans laquelle vous vous trouvez, changez le numéro dans la partie code:
 
 ```curl -Lsk https://si... ...&idParroquia\=1``` = Canillo
 
@@ -302,7 +314,11 @@ or if you want to change to <strong>Heating diesel</strong> change the 4 for a 7
 
 ```curl -Lsk https://si... ...?idProducte\=7```
 
-If you want to get any other gas station that is on the web you must write the name exactly as it is written there and depending on where it is, change the parish number:
+If you want to get any other gas station that is on the web, although it seems that the prices are the same depending on the brand, you must write the name exactly as it is written there and change it in the code part:
+
+```| grep -i 'Andorracing Experience' -A10 |```
+
+and depending on which parish it is in, change the number in the code part:
 
 ```curl -Lsk https://si... ...&idParroquia\=1``` = Canillo
 
